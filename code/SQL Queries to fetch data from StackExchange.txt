@@ -1,0 +1,11 @@
+#Website used for querying
+https://data.stackexchange.com/stackoverflow/query/new
+
+#To determine the range
+select count(*) from posts where posts.ViewCount > 100000
+
+#Download 200000 unique records having the most ViewCount
+select top 50000 * from posts where posts.ViewCount > 100000 ORDER BY posts.ViewCount DESC	
+select top 50000 * from posts where posts.ViewCount < 127755 and posts.Id != 8618374 ORDER BY posts.ViewCount DESC
+select top 50000 * from posts where posts.ViewCount < 74786 and posts.Id != 13836848 ORDER BY posts.ViewCount DESC
+select top 50000 * from posts where posts.ViewCount < 53403 ORDER BY posts.ViewCount DESC
